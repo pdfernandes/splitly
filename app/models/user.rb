@@ -34,6 +34,10 @@ class User < ApplicationRecord
         self.session_token ||= self.class.generate_session_token
     end
 
+    def set_defaults
+        self.funds ||= 0.0
+    end
+
 
     
 
